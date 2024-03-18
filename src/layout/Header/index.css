@@ -1,0 +1,5 @@
+.header__container {
+    height: 100dvh;
+    display: flex;
+    justify-content: space-between;
+}
