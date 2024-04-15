@@ -2,6 +2,8 @@ import { Outlet, useNavigate } from 'react-router-dom';
 import './styles/index.css';
 import { useEffect } from 'react';
 import ReactLenis from '@studio-freight/react-lenis';
+import Header from './layout/Header';
+import Footer from './layout/Footer';
 
 const lenisOptions = {
   lerp: 0.1,
@@ -18,13 +20,15 @@ function App() {
     if (!userName) {
       naviagte('/login');
     } else {
-      naviagte('/home');
+      naviagte('/home/my-works');
     }
   }, []);
 
   return (
     <ReactLenis root options={lenisOptions}>
+      <Header />
       <Outlet />
+      <Footer />
     </ReactLenis>
   )
 }

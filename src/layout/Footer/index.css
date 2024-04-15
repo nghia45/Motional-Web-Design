@@ -7,7 +7,7 @@
   width: 100vw;
   height: 50vh;
   padding: 0 2rem;
-  /* background: var(--gray-tint-60); */
+  background: var(--gray-tint-60);
 }
 
 .contact-section-header > h2 {
@@ -26,6 +26,7 @@
 
 .contact-section a {
     color: var(--blue-accent)
+    /* color: var(--secondary); */
 }
 
 .contact-links {

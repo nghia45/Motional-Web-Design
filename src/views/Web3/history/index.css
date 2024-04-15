@@ -1,0 +1,6 @@
+.history__grid {
+    display: grid;
+    /* template: 4 col 1-2-2-2 */
+    grid-template-columns: 1fr 2fr 3fr 2fr;
+    gap: 1rem;
+}

@@ -19,6 +19,7 @@ nav a {
 
 nav a:hover {
     transform: translate3d(.5rem, 0, 0);
+    cursor: pointer;
 }
 
 .navbar__container {

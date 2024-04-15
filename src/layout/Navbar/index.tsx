@@ -11,13 +11,27 @@ const Navbar = ({}: Props) => {
     window.location.href = '/login';
   }
 
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: 'smooth',
+    });
+  };
+
+  const scroll100Vh = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <nav className='navbar__container flex flex-row w-screen items-center'>
       <MenuButton />
       <ul className='flex'>
-        <li><a href='#header'>Home</a></li>
-        <li><a href='#'>About</a></li>
-        <li><a href='#'>Contact</a></li>
+        <li><a href='/home/my-works'>Home</a></li>
+        <li><a onClick={scroll100Vh}>About</a></li>
+        <li><a onClick={scrollToBottom}>Contact</a></li>
       </ul>
       <button className='logout-button' onClick={handleLogout}>Logout</button>
     </nav>
