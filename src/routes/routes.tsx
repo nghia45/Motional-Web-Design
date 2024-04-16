@@ -4,10 +4,11 @@ import ErrorPage from "./errorPage";
 import PrivateRoute from "./privateRoute";
 import { Suspense, lazy } from "react";
 
+
+const Login = lazy(() => import("../views/login"))
 const Home = lazy(() => import("../layout/PageLayout"))
 const Web3 = lazy(() => import("../views/Web3"))
 const MyWorks = lazy(() => import("../views/myworks"))
-const Login = lazy(() => import("../views/login"))
 
 const routes = createBrowserRouter([
     {
