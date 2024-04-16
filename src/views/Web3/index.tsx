@@ -33,7 +33,8 @@ const Web3 = ({ }: Props) => {
 
                 //update account address when account change
                 ethereum.on('accountsChanged', async () => {
-                    window.location.reload();
+                    const account = await ethereum.request({ method: 'eth_requestAccounts' });
+                    setAccountAddress(account[0]);
                 });
 
                 const provider = new ethers.providers.Web3Provider(ethereum);
@@ -62,11 +63,11 @@ const Web3 = ({ }: Props) => {
                     <div>This contract {web3Init.contract?.address} is on Sepolia Testnet</div>
                 </div>
                 <div className="w-1/3">
-                    <SendTransactiom web3Info={web3Init} triggerRefetch={triggerRefetch} setTriggerRefetch={setTriggerRefetch}/>
+                    <SendTransactiom web3Info={web3Init} triggerRefetch={triggerRefetch} setTriggerRefetch={setTriggerRefetch} />
                 </div>
             </div>
             <div>
-                <History web3Info={web3Init} triggerRefetch={triggerRefetch}/>
+                <History web3Info={web3Init} triggerRefetch={triggerRefetch} />
             </div>
         </div>
     )
