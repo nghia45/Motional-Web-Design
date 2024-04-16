@@ -32,7 +32,7 @@ const Web3 = ({ }: Props) => {
                 setAccountAddress(account[0]);
 
                 //update account address when account change
-                window.ethereum.on('accountsChanged', async () => {
+                ethereum.on('accountsChanged', async () => {
                     window.location.reload();
                 });
 
